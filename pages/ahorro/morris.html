@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Morris Charts</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+.morris-default-style{
+  text-align: center;
+}
+.morris-hover-row-label,
+.morris-hover-point,
+.morris-hover-point{
+  margin-left: 30px; display: inline-block;
+}
+</style>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <div class="container-fluid">
+    <!-- Content Header (Page header) -->
+    <!-- Main content -->
+    <section class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Gráfica de pastel solicitada</h3>
+            </div>
+            <div class="panel-body text-center">
+              <img src="graphic-detail-solde.png" class="img-responsive" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Propuesta de gráfica de pastel</h3>
+            </div>
+            <div class="panel-body">
+              <div class="chart" id="sales-chart" class="img-responsive" style="height: 290px;" ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Gráfica de líneas solicitada</h3>
+            </div>
+            <div class="panel-body text-center">
+              <img src="graphic-detail-solde2.png" class="img-responsive" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Propuesta de gráfica de líneas</h3>
+            </div>
+            <div class="panel-body"><div class="chart" id="line-chart" style=""></div> </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- Morris.js charts -->
+<script src="../../plugins/raphael/raphael-min.js"></script>
+<script src="../../plugins/morris/morris.min.js"></script>
+
+
+<!-- page script -->
+<script>
+  $(function () {
+    // LINE CHART
+
+    var day_data = [
+      {"month": "2012-01", "china": 2000, "dolar": 100},
+      {"month": "2012-02", "china": 1000, "dolar": 629},
+      {"month": "2012-03", "china": 1500, "dolar": 618},
+      {"month": "2012-04", "china": 200, "dolar": 661}
+    ];
+    var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+    var line = new  Morris.Line({
+      element: 'line-chart',
+      data: day_data,
+      xkey: ['month'],
+      ykeys: ['china', 'dolar'],
+      labels: ['China', 'Dolar'],
+      xLabels: ['month'],
+      resize: 'month',
+      lineWidth: 1,
+      smooth: false,
+      units: 1,
+      //lineColors: ['#167f39','#990000', '#000099'],
+      //pointSize: 5,
+      //continuousLine: true,
+      grid: true,
+      //axes: 'true',
+      //xLabelFormat: function(month) { return month.getDate()+'/'+(month.getMonth()+1)+'/'+month.getFullYear(); },
+      xLabelFormat: function(d) { return months[d.getMonth()]; },
+    });
+
+    //DONUT CHART
+    var donut = new Morris.Donut({
+          element: 'sales-chart',
+          data: [
+                {value: 70, label: 'China'},
+                {value: 15, label: 'Dolares dinámicos'},
+                {value: 10, label: 'Pesos dinámicos'},
+                {value: 5, label:   'Otro'}
+          ],
+          formatter: function (x) { return x + "%"} }).on('click', function(i, row){ console.log(i, row)
+        });
+      });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+body{  background-color: rgb(255, 255, 255);}
+
+.divider{ padding: 10px; }
+.border-none{ border: 0;}
+
+.upp{ text-transform: uppercase; }
+.bold{ font-weight: bold;}
+.txt15{ font-size: 15px;}
+.txt20{ font-size: 20px;}
+
+.txtcenter{ text-align: center;}
+
+.padd0{ padding: 0px; }
+.padd15{ padding: 15px;}
+.padd20{ padding: 20px;}
+.padd-tb20{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.margin-tb5{
+  margin: 5px 0px 5px 0px;
+}
+.margin-tb20{
+  margin: 10px 0px 10px 0px;
+}
+.margin-tb20{
+  margin: 20px 0px 20px 0px;
+}
+
+.txt-dark-blue{ color: rgb(0, 71, 137);}
+.txt-white{ color: rgb(255, 255, 255);}
+.txt-ligth-blue{ color: rgb(0, 163, 238);}
+.txt-dark-gray{ color: rgb(102, 102, 102);}
+
+.bg-dark-blue{ background-color: rgb(0, 71, 137); }
+.bg-gray{ background-color: rgb(245, 245, 245); }
+.bg-ligth-blue{ background-color: rgb(0, 163, 238);}
+
+.bg-gray-all-force { background-color: rgb(245,245,245)!important; }
+
+section .section-title, .band{
+  font-size: 20px;
+  text-transform: capitalize;
+}
+section .section-title{
+  color: rgb(102, 102, 102);
+  font-weight: bold;
+}
+section .band{
+  color: rgb(255, 255, 255);
+}
+
+
+div.facture div.band{
+  background-color: rgb(0, 71, 137);
+}
+
+div.facture div.band div.band-text{
+  padding: 15px;
+  font-weight: bold;
+}
+
+div.alternative-odd:hover{
+  background-color: rgb(245, 245, 245);
+}
+div.alternative-even{
+  background-color: rgb(178, 199, 220);
+}
+div.alternative-even:hover{
+  background-color: rgb(167, 187, 207);
+}
+div.alternative-item{
+  padding: 20px 0px 20px 0px;
+}
+div.alternative-odd>:first-child, div.alternative-odd>:last-child{
+  font-weight: bold;
+}
+div.alternative-even>:first-child, div.alternative-even>:last-child{
+  font-weight: bold;
+}
+
+
+/* fectura */
+section.factura-container{
+
+}
+section.factura-container div.factura-item{
+  background-color: rgb(245, 245, 245);
+}
+section.factura-container div.factura-item:hover{
+  background-color: rgb(219, 217, 217);
+}
+
+
+/*Categoria salud*/
+
+  /*tramites*/
+section.tramite{
+
+}
+section.tramite select{
+  height: 60px;
+  font-size: 20px;
+  background-color: #F5F5F5;
+  border: none;
+}
+section.tramite optgroup{
+  border: none;
+}
+section.tramite optgroup option{
+  border: none;
+}
+
+.btnsend{
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    border: 0;
+  }
+
+  /*siniestros*/
+  section.sinester{
+
+  }
+  section.sinister div.sinister_item_even{
+
+  }
+
+  /* plazos de pago */
+  div.period-container{
+
+  }
+  div.period-item{
+    padding: 20px;
+    background-color: rgb(245, 245, 245);
+    margin: 10px 0px 10px 0px;
+    font-size: 15px;
+  }
+  div.period-item:hover{
+    background-color: rgb(219, 217, 217);
+  }
+
+
+
+  /**
+   *
+   *  media queries desktop first
+   */
+
+ @media (max-width: 768px) {
+     .btnsend:active{
+       background-color: rgb(138, 135, 135)!important;
+     }
+     .btnsend:hover{
+       background-color: rgb(158, 158, 158)!important;
+     }
+     .btnsend{
+       background-color: rgb(185, 181, 181)!important;
+     }
+     section.tramite .police{
+       color: rgb(6, 129, 186);
+     }
+ }
+
+ @media (min-width: 768px) {
+   section.sinister div.sinister_item_odd:hover{
+     background-color: #F5F5F5;
+   }
+   section.sinister div.sinister_item_even{
+     background-color: rgb(204, 236, 251);
+   }
+   section.sinister div.sinister_item_even:hover{
+     background-color: rgb(183, 211, 224);
+   }
+   .btnsend{
+       background-color: rgb(0, 163, 238);
+     }
+   .btnsend:hover{
+       background-color: rgb(64, 183, 237)!important;
+   }
+   .btnsend:active{
+       background-color: rgb(6, 129, 186)!important;
+   }
+   section.tramite .police{
+     background-color: rgb(0, 163, 238);
+     color: rgb(255, 255, 255);
+   }
+ }
+
+ @media (min-width:){
+
+
+ }
