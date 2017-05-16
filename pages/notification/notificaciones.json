@@ -1,0 +1,35 @@
+{
+  "estatus": true,
+  "mensaje": "JSON consumido correctamente",
+  "response": {
+    "idCliente": "id",
+    "avisos": [{
+      "aviso": {
+        "estatus": 0,
+        "titulo": "Recibo de poliza GMMI",
+        "detalle": "Se envia el saldo de sjhsdjkfhsdkjfhkjsdfhkdsj"
+      },
+
+      "aviso": {
+        "estatus": 0,
+        "titulo": "Recibo2 de poliza GMMI",
+        "detalle": "Se envia el saldo de sjhsdjkfhsdkjfhkjsdfhkdsj"
+      }
+    }],
+    "notificaciones": [{
+      "notificacion": {
+        "estatus": 0,
+        "titulo": "Envio de poliza GMM0012",
+        "detalle": "Se envia el adeudo de sjhsdjkfhsdkjfhkjsdfhkdsj",
+        "fecha": ""
+      },
+
+      "notificacion": {
+        "estatus": 0,
+        "titulo": "Envio de poliza GMM0012",
+        "detalle": "Se envia el adeudo de sjhsdjkfhsdkjfhkjsdfhkdsj",
+        "fecha": ""
+      }
+    }],
+  }
+}

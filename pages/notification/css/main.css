@@ -1,0 +1,120 @@
+.notification-bar {
+  padding: 20px;
+}
+
+.icon-notification-container {
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+
+.icon-notification {
+  max-width: 30px;
+}
+
+.icon-notification-container .container-nots {
+  position: absolute;
+  right: -5px;
+}
+
+.container-nots {
+  width: 300px;
+  display: none;
+  z-index: 1;
+}
+
+.container-nots .relative {}
+
+.icon-notification {
+  /*height: 25px;
+  width: 25px;*/
+}
+
+.badge-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  color: white;
+  width: 17px;
+  height: 17px;
+  background: url('../img/icon-counter.png') no-repeat;
+  text-align: center;
+  font-size: 10px;
+}
+
+.badge-count img {
+  width: 17px;
+}
+
+</style><style>body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2c5ba1;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.index-1{
+  position: relative;
+  z-index: 1;
+}
+
+/*  */
+.notification-list{
+  /*padding: 2px;*/
+
+}
+.notification-list .title{
+  color: #003187;
+}
+.notification-list .detail{
+  color: #666666;
+
+}
+.notification-list .notification-item{
+  width: 100%;
+  margin-bottom: 5px;
+  background-color: #EEEEEE;
+  border: none;
+  padding: 5px;
+}
+.notification-list .notification-item img{
+  margin-top: 2px;
+  margin-right: 5px;
+}
+
+.notification-list .notRead{
+  background-color: #C0C0C0!important;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
